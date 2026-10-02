@@ -1,8 +1,8 @@
-# Vandycins Admin Panel - Hostinger
+# VandyCare Admin Panel - Hostinger
 
 ## 1. Configure API
 Copy `.env.example` to `.env` and set:
-`VITE_API_BASE_URL=https://vandycinsapis.vandymondglobal.in/v1`
+`VITE_API_BASE_URL=https://vandycareapis.vandytrust.com/v1`
 
 ## 2. Build
 Run:

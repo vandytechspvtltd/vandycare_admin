@@ -34,7 +34,7 @@ function Login({ onLogin }: { onLogin: (token: string, user: any) => void }) {
       <h1>Admin Control Center</h1>
       <p>Sign in to manage doctors and patients.</p>
       {error && <div className="error">{error}</div>}
-      <label>Email<input value={email} onChange={e=>setEmail(e.target.value)} type="email" placeholder="admin@example.com" required /></label>
+      <label>Email<input value={email} onChange={e=>setEmail(e.target.value)} type="email" placeholder="admin" required /></label>
       <label>Password<input value={password} onChange={e=>setPassword(e.target.value)} type="password" placeholder="••••••••" required /></label>
       <button className="primary full" disabled={loading}>{loading ? 'Signing in...' : 'Sign In'}</button>
     </form>
