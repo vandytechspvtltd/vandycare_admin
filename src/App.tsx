@@ -30,11 +30,11 @@ function Login({ onLogin }: { onLogin: (token: string, user: any) => void }) {
 
   return <div className="login-page">
     <form className="login-card" onSubmit={submit}>
-      <div className="brand">VANDYCINS</div>
+      <div className="brand">VANDYCARE</div>
       <h1>Admin Control Center</h1>
       <p>Sign in to manage doctors and patients.</p>
       {error && <div className="error">{error}</div>}
-      <label>Email<input value={email} onChange={e=>setEmail(e.target.value)} type="email" placeholder="admin" required /></label>
+      <label>Email<input value={email} onChange={e=>setEmail(e.target.value)} type="email" placeholder="admin@example.com" required /></label>
       <label>Password<input value={password} onChange={e=>setPassword(e.target.value)} type="password" placeholder="••••••••" required /></label>
       <button className="primary full" disabled={loading}>{loading ? 'Signing in...' : 'Sign In'}</button>
     </form>
@@ -88,7 +88,7 @@ function App() {
 
   return <div className="app">
     <header className="topbar">
-      <div className="brand">VANDYCINS <span>Admin Control Center</span></div>
+      <div className="brand">VANDYCARE <span>Admin Control Center</span></div>
       <div className="top-actions">
         <button className="icon-btn mobile-only" onClick={()=>setMobileNav(!mobileNav)}>{mobileNav?<X/>:<Menu/>}</button>
         <button className="secondary" onClick={refresh}><RefreshCw size={15}/> Refresh</button>
@@ -101,7 +101,7 @@ function App() {
       </aside>
       <main className="content">
         {error && <div className="error banner">{error}</div>}
-        <div className="page-head"><div><h1>{activeTitle}</h1><p>Vandycins administration portal</p></div></div>
+        <div className="page-head"><div><h1>{activeTitle}</h1><p>VandyCare administration portal</p></div></div>
 
         {tab==='overview' && <div className="grid cards">
           <Card label="Total Patients" value={patients.length}/>
