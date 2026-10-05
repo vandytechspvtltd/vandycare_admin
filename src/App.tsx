@@ -55,6 +55,9 @@ function Login({
       const token =
         result?.access_token ||
         result?.data?.accessToken
+      const refreshToken =
+        result?.refresh_token ||
+        result?.data?.refreshToken
 
       if (!token) {
         throw new Error(
@@ -66,6 +69,13 @@ function Login({
         'admin_access_token',
         token
       )
+
+      if (refreshToken) {
+        localStorage.setItem(
+          'admin_refresh_token',
+          refreshToken
+        )
+      }
 
       localStorage.setItem(
         'admin_user',
